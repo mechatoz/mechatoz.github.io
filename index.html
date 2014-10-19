@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Il Yong Chun</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/ico" href="css/favicon.ico">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- enable dropdown NavBar -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <!-- Custom CSS / include Entypo (entypo.com) -->
+    <style>
+    body {
+        padding-top: 70px;
+        padding-bottom: 40px;
+    }
+    @font-face {
+        font-family: 'EntypoRegular';
+        src: url('fonts/entypo.eot');
+        src: url('fonts/entypo.eot?#iefix') format('embedded-opentype'),
+        url('fonts/entypo.woff') format('woff'),
+        url('fonts/entypo.ttf') format('truetype'),
+        url('fonts/entypo.svg#EntypoRegular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'EntypoSocialRegular';
+        src: url('fonts/entypo-social.eot');
+        src: url('fonts/entypo-social.eot?#iefix') format('embedded-opentype'),
+        url('fonts/entypo-social.woff') format('woff'),
+        url('fonts/entypo-social.ttf') format('truetype'),
+        url('fonts/entypo-social.svg#EntypoRegular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    .entypo {
+        font-family: 'EntypoRegular';
+        font-size: 2em;
+        font-weight: normal;
+        line-height: 0;
+    }
+    .entypo-social {
+        font-family: 'EntypoSocialRegular';
+        font-size: 2em;
+        font-weight: normal;
+        line-height: 0;
+    }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- include google analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-46742922-1', 'jhjin.com');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Research</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+
+                    <li>
+                        <a href="files/cv.pdf">CV</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- header introduction -->
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>Il Yong Chun <small>(chun.ilyong at gmail)</small></h1>
+                <p class="text-center">Ph.D. Candidate in
+                    <a href="https://engineering.purdue.edu/ECE" target="_blank">Electrical and Computer Engineering</a> <br> under the supervision of
+                    <a href="https://engineering.purdue.edu/~tmt/" target="_blank">Professor Thomas M. Talavage </a> and
+	            <a href="http://www.sfu.ca/~benadcock/" target="_blank">Professor Ben Adcock </a> <br>
+                    Research interests in <mark>compressed sensing, medical imaging,</mark> <br> <mark>statistical image processing, algorithm acceleration, and (statistical) image analysis</mark>
+                </p>
+
+		<p class="text-center">Find me on
+		    <span class="entypo-social">&#62223;</span> <a href="http://scholar.google.com/citations?user=hjXMGEIAAAAJ&hl=ko" target="_blank">Scholar</a>,
+		    <span class="entypo-social">&#62232;</span> <a href="http://www.linkedin.com/in/ilyong" target="_blank">LinkedIn</a>,
+                    <span class="entypo">&#127891;</span> <a href="http://www.purdue.edu/research/png/" target="_blank">PNG</a>.
+                </p>
+
+                <hr>
+            </div>
+        </div>
+
+        <!-- research grid -->
+        <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-2 col-md-offset-1">
+                <img src="files/research-CS.png" width="100%" class="img-rounded" style="margin: 2.5% 2.5%">
+            </div>
+            <div class="col-xs-9 col-sm-9 col-md-7">
+                <h4>Compressed Sensing in Medical Imaging </h4>
+                <p class="text-left">
+                    Compressed sensing (CS), random sub-sampling theory dependent on sparsity of signal, has potential to significantly accelerate imaging in MRI, reduce radiation dose in X-ray CT, and increase image resolution in PET/CT.  In order to achieve such goals in practice, my research objective is to improve CS recovery guarantee by developing CS-based imaging fundamentals.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-2 col-md-offset-1">
+                <img src="files/research-StatImgProc.png" width="100%" class="img-rounded" style="margin: 2.5% 2.5%">
+            </div>
+            <div class="col-xs-9 col-sm-9 col-md-7">
+                <h4>Statistical Medical Imaging</h4>
+                <p class="text-left">
+                    Most medical scanners are suffered from various types of noise relying on their own imaging physics.  Based on statistical properties of the noise in measurements, my aim is to improve SNR or reduce MSE in reconstructed images by advancing imaging technologies.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-2 col-md-offset-1">
+                <img src="files/research-AccAlgo.png" width="100%" class="img-rounded" style="margin: 2.5% 2.5%">
+            </div>
+            <div class="col-xs-9 col-sm-9 col-md-7">
+                <h4>Algorithm Acceleration in Image Processing</h4>
+                <p class="text-left">
+                    Fancy image processing (e.g., reconstruction) model and its iterative algorithm generally result in higher recovery accuracy; however, their computational complexity is a performance bottleneck of this solutions  To deliver high-quality images to patients, the development of accelerated algorithms is necessary in practice.
+                </p>
+            </div>
+        </div>
+	<div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-2 col-md-offset-1">
+                <img src="files/research-Clinic.png" width="100%" class="img-rounded" style="margin: 2.5% 2.5%">
+            </div>
+            <div class="col-xs-9 col-sm-9 col-md-7">
+                <h4>Medical Image Analysis and Neuroimages</h4>
+                <p class="text-left">
+                    Current technologies in automatic medical image analysis, e.g., registration, segmentation, and classification, are imperfect in their accuracy.  A combination of multiple information from intensity and gradient would be useful to improve the performance, e.g., in multi-modal image registration. 
+		</p>
+                <p class="text-left">	
+		    In neuroscience society, an appropriate statistical image analysis framework is largely absent, e.g., for hypothesis testing.  A combination of complete and incomplete paired data results in larger pool size; it is expected to increase detection power.  The stronger hypothesis testing method is particularly useful to reliably detect subtle changes in athletes who experienced subconcussive head blows.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <hr>
+            <h4> <p class="text-center"><span class="entypo">&#59141;</span> To see the complete list of publications, please
+                <a href="http://ilyong.ch/files/cv.pdf" target="_blank">click here</a> to access my CV. </h4>
+            </p>
+        </div>
+
+
+        <!-- footer copyright -->
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="list-unstyled">
+                    <li class="pull-right"><a href="#top">Back to top</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
