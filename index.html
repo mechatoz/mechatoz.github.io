@@ -140,9 +140,9 @@
             <div class="col-xs-9 col-sm-9 col-md-7">
                 <h4>Compressed Sensing and Parallel Acquisition: Theory and Application </h4>
                 <p class="text-left">
-		   Parallel acquisition systems are employed successfully in a variety of different sensing applications when a single sensor cannot provide enough measurements for a high-quality reconstruction.  
+		   <i>Parallel acquisition</i> systems are employed successfully in a variety of different sensing/imaging applications (e.g., parallel MRI, multi-view imaging, wireless sensor networks, light-field imaging with muptiple focal stacks, synthetic aperture radar imaging, derivative sampling in seismic imaging, etc.) when a single sensor cannot provide enough measurements for a high-quality reconstruction.  
 	           Compressed sensing (CS), random sub-sampling theory dependent on the sparsity of signal, has been used to establish the theoretical improvements of such systems by providing recovery guarantees for which, subject to appropriate conditions, the number of measurements required per sensor decreases linearly with the total number of sensors.
-		   My research objective is to improve such guarantees in the parallel acquisition system, develope CS-based imaging fundamentals, and apply them in practical applications, e.g. parallel MRI and light-field imaging.
+		   I am a pioneer in establishing theoretical improvements of CS parallel acquisition architecture, developing CS-based imaging fundamentals, and applying them in practical applications, e.g., parallel MRI and light-field imaging with multiple focal stacks.
                 </p>
             </div>
         </div>
@@ -153,9 +153,11 @@
             <div class="col-xs-9 col-sm-9 col-md-7">
                 <h4>Convolutional Dictionary Learning: Acceleration and Convergence</h4>
                 <p class="text-left">
-		    The so-called convolutional dictionary learning (or sparse coding) is essential in variant convolutional neural network models. An accelerated algorithm development is a fundamental issue in learning convolutional dictionary from &quot;big data&quot;. 
-		    In addition, the convergence guarantee is another crucial issue in learning convolutional dictionary, particularly when the learned kernels are applied to solve some inverse problems.
-		    While establishing the accelerated and stable algorithm in convolutional dictionary learning, I am actively applying them to signal recovery with higher accuracy in medical imaging and computational photography.
+		   <i>Convolutional dictionary learning</i> (CDL; or convolutional sparse coding) is a fundamental component to mathematically understand the (deep) convolutional neural network (CNN).
+		   An accelerated CDL algorithm development is the first essential issue in learning hundreds of filters from &quot;big data&quot; that consist of millions of training images. 
+	           The convergence guarantee is another crucial issue. Without convergence theorem, one cannot guarantee whether the learned filters after many iterations are reasonable or not; in addition, convergence analysis can provide a new perspective to design faster algorithms.
+		   I am in the forefront of developing convergence-guaranteed and stable algorithms of CDL and accelerating the algorithms.   
+		   While establishing accelerated and convergent algorithms for CDL, I am actively applying them to reconstruct images in medical imaging and computational photography.
                 </p>
             </div>
         </div>
@@ -165,10 +167,10 @@
             </div>
             <div class="col-xs-9 col-sm-9 col-md-7">
                 <h4>Adaptive Signal Processing in Computational Imaging</h4>
-                <p class="text-left">
-                    Most imaging devices are suffered from various types of noise relying on their own imaging physics; in particular for the highly under-sampling scanners, severe residual aliasing artifacts and amplified noise can easily occur.  
-		    The optimal adaptive control in imaging devices can provide an alternative solution to recover high-quality images, while not harming the image recovery stability.
-		    Based on stochastic modeling, my aim is to improve SNR or reduce MSE in reconstructed images by exploiting adaptive signal processing techniques to different imaging techniques.
+                <p class="text-left">		
+                    Most imaging devices have complicated imaging physics and suffer from various types of noise. This is the main reason that underlying mathematical analyses are largely absent in their image recovery performance. If undersampling schemes are involved, the performance analysis becomes a tricky math problem. 
+		    By exploiting signal processing estimation techniques (e.g., mean square error, MSE, and signal-to-noise ratio, SNR) and stochastic modeling, my third research interest is to adaptively control imaging techniques to improve the quality of reconstructed images. 
+		    For example, I initially established the imaging fundamentals of (high-field) MRI using multiple transmit and receive coils and its relation to MSE, and proposed a new excitation pattern design which further reduces MSE and manages the specific absorption rate.
                 </p>
             </div>
         </div>
@@ -179,11 +181,18 @@
             <div class="col-xs-9 col-sm-9 col-md-7">
                 <h4>Image Analysis in Neuroimaging</h4>
                 <p class="text-left">
-                    Current technologies in automatic medical image analysis, e.g., registration, segmentation, and classification, are imperfect in their accuracy.  A combination of multiple information from intensity and gradient would be useful to improve the performance, e.g., in multi-modal image registration. 
+		    Recently, rapid interest has grown in the neuroscience community in evaluating the impact of brain changes caused by repetitive sub-concussive hits to the head.	
+		    Using diffusion tensor MRI, I evaluated longitudinal white matter changes in high-school football players and examined how these changes may be linked to an athlete’s history of accumulated head collision events during practices and games.
 		</p>
-                <p class="text-left">	
-		    In neuroscience society, an appropriate statistical image analysis framework is largely absent, e.g., for hypothesis testing.  A combination of complete and incomplete paired data results in larger pool size; it is expected to increase detection power.  The stronger hypothesis testing method is particularly useful to reliably detect subtle changes in athletes who experienced subconcussive head blows.
+                <p class="text-left">
+		    On the other hand, an appropriate statistical image analysis framework (e.g., hypothesis testing) to reliably detect subtle changes in athletes who experienced repetitive sub-concussive head blows is largely absent. 
+		    I initially proposed a stronger randomized hypothesis testing method that exploits both completely and incompletely paired data. 
+		    The method successfully detects more significantly deviated regions in the sub-concussed brains, thereby providing a stronger evidence to suggest that head impacts commonly occur during contact sports have the potential for neurological injury although those impacts do not result in visible symptoms of neurological dysfunction.
                 </p>
+		<!--
+		Current technologies in automatic medical image analysis, e.g., registration, segmentation, and classification, are imperfect in their accuracy.  A combination of multiple information from intensity and gradient would be useful to improve the performance, e.g., in multi-modal image registration.
+		In neuroscience society, an appropriate statistical image analysis framework is largely absent, e.g., for hypothesis testing.  A combination of complete and incomplete paired data results in larger pool size; it is expected to increase detection power.  The stronger hypothesis testing method is particularly useful to reliably detect subtle changes in athletes who experienced subconcussive head blows. 
+		-->
             </div>
         </div>
 
