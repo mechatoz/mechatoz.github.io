@@ -119,7 +119,7 @@
                     <a href="https://www.eecs.umich.edu/" target="_blank">Electrical Engineering and Computer Science</a><br> 
                     under the supervision of
 	            <a href="http://web.eecs.umich.edu/~fessler/" target="_blank">Professor Jeffrey A. Fessler</a><br>
-                    Research interests in <mark>convolutional operator learning and neural networks,</mark> <br> <mark>compressed sensing, block proximal gradient optimization,</mark> <br> <mark> model-based computational imaging, and image analysis</mark>
+                    Research interests in <mark>convolutional operator learning and neural networks,</mark> <br> <mark>compressed sensing, block proximal gradient optimization,</mark> <br> <mark> "extreme" computational imaging, and image analysis</mark>
                 </p>
 
 		<p class="text-center">Find me on
@@ -145,12 +145,12 @@
 		   This becomes even more problematic in forming (deep) hierarchical representations, e.g., <i>(de)convolutional neural network</i> ((de)CNN).
 		   The recent <i><b>global</b></i> approach resolves the issues by learning kernels and obtaining (sparse) representations directly in the image domain without storing many overlapping patches.
                    I am the first researcher in developing fast and convergence-guaranteed convolutional operator learning frameworks within the global approach, e.g., <i><b>convolutional dictionary learning</b></i> and <i><b>convolutional analysis operator learning</b></i> (CAOL), via the so-called <i><b>Block Proximal Gradient method using Majorizer</b></i> (BPG-M) that sheds new light on tight majorization in solving block multi-(non)convex problems.
-		   The learned convolutional operators improved image recovery performance for some extreme imaging applications, e.g., sparse-view CT and denoising low signal-to-noise ratio (SNR) images. 
+		   The learned convolutional operators improved image recovery performance for some extreme imaging applications, e.g., <u>sparse-view CT</u> and <u>denoising low SNR images</u>. 
 		</p>
 		<p class="text-left">	
 		   From 2015, researchers have been studying algorithmic properties of training (deep) CNNs by reformulating their objective function.
 		   More recently, there have been some attempts to moderate some problems of stochastic gradient methods in which gradients are computed by back-propagation&mdash;the most widely used optimization technique in training CNN.
-		   However, there exist no solid frameworks based on accelerated proximal gradient method to maximally accelerate the training convergence of CNN.
+		   However, there exist no solid algorithmic frameworks&mdash;particulalry based on accelerated proximal gradient methods&mdash;to maximally accelerate the training convergence of CNN.
 		   On the application sides, researchers have begun to apply (deep) NNs to iterative signal/image recovery models. 
 		   However, they lack "complete" mathematical models in iterative signal recovery; it limits comprehensively understand/analyze them in terms of both signal recovery and algorithmic properties, e.g., acceleration and convergence.
 		   I am a pioneer in mathematically formulating CNNs (e.g., LeNet-5) particularly suitable for iterative signal/image recovery, while overcoming the aforementioned limitations via the CAOL and BPG-M frameworks.
@@ -166,7 +166,7 @@
                 <p class="text-left">
 		   <i><b>Parallel acquisition</b></i> systems are employed successfully in a variety of different sensing/imaging applications (e.g., parallel MRI, multi-view imaging, wireless sensor networks, light-field imaging with muptiple focal stacks, synthetic aperture radar imaging, derivative sampling in seismic imaging, etc.) when a single sensor cannot provide enough measurements for a high-quality signal recovery.  
 	           Compressed sensing (CS), random sub-sampling theory dependent on the sparsity of signal, has been used to establish the theoretical improvements of such systems by providing recovery guarantees for which, subject to appropriate conditions, the number of measurements required per sensor decreases linearly with the total number of sensors.
-		   I am a pioneer in establishing theoretical improvements of CS parallel acquisition architecture, developing CS-based imaging fundamentals, and applying these theories in practical applications, e.g., parallel MRI (MRI using multiple receive coils) and light-field imaging with multiple focal stacks.
+		   I am a pioneer in establishing theoretical improvements of CS parallel acquisition architecture, developing CS-based imaging fundamentals, and applying these theories in practical applications, e.g., <u>parallel MRI</u> (MRI using multiple receive coils) and <u>light-field photography with multiple focal stacks</u>.
                 </p>
             </div>
         </div>
@@ -179,7 +179,7 @@
                 <p class="text-left">		
                     Most imaging devices have complicated imaging physics and suffer from various types of noise. This is the main reason that underlying mathematical analyses are largely absent in their image recovery performance. If undersampling schemes are involved, the performance analysis becomes a tricky math problem. 
 		    By exploiting signal processing estimation techniques (e.g., mean square error, MSE, and SNR) and stochastic modeling, my third research interest is to adaptively control imaging techniques to improve the quality of reconstructed images. 
-		    For example, I initially established the imaging fundamentals of (high-field) MRI using multiple transmit/receive coils and its relation to MSE, and proposed a new excitation pattern design which further reduces MSE and manages the specific absorption rate.
+		    For example, I initially established the imaging fundamentals of <u>(high-field) MRI using multiple transmit/receive coils</u> and its relation to MSE, and proposed a new excitation pattern design which further reduces MSE and manages the specific absorption rate.
 		    In particular, adaptively considering the spatial information of transmit and receive coils and expected aliasing patterns, the proposed excitation pattern not only successfully reduces the error variances but also suppresses the aliasing artifacts caused by extremely accelerating (i.e., 8-fold) scanning.
                 </p>
             </div>
@@ -189,10 +189,10 @@
                 <img src="files/research-Clinic.png" width="100%" class="img-rounded" style="margin: 0% 0%">
             </div>
             <div class="col-xs-9 col-sm-9 col-md-7">
-                <h4>Translational Imaging: Neuroimaging and Neuroscience</h4>
+                <h4>Neuroimaging and Neuroscience</h4>
                 <p class="text-left">
 		    Recently, rapid interest has grown in the neuroscience community in evaluating the impact of brain changes caused by repetitive sub-concussive hits to the head.	
-		    Using diffusion tensor MRI, I evaluated longitudinal white matter changes in high-school football players and examined how these changes may be linked to an athlete’s history of accumulated head collision events during practices and games.
+		    Using <i><b>diffusion tensor MRI</b></i>, I evaluated longitudinal white matter changes in high-school football players and examined how these changes may be linked to an athlete’s history of accumulated head collision events during practices and games.
 		</p>
                 <p class="text-left">
 		    On the other hand, an appropriate statistical image analysis framework (e.g., hypothesis testing) to reliably detect subtle changes in athletes who experienced repetitive sub-concussive head blows is largely absent. 
