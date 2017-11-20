@@ -124,8 +124,7 @@
 
 		<p class="text-center">Find me on
 		    <span class="entypo-social">&#62223;</span> <a href="http://scholar.google.com/citations?user=hjXMGEIAAAAJ&hl=ko" target="_blank">Scholar</a>,
-		    <span class="entypo-social">&#62232;</span> <a href="http://www.linkedin.com/in/ilyong" target="_blank">LinkedIn</a>,
-                    <span class="entypo">&#127891;</span> <a href="http://www.purdue.edu/research/png/" target="_blank">PNG</a>.
+		    <span class="entypo-social">&#62232;</span> <a href="http://www.linkedin.com/in/ilyong" target="_blank">LinkedIn</a>.
                 </p>
 
                 <hr>
@@ -133,6 +132,31 @@
         </div>
 
         <!-- research grid -->
+	<div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-2 col-md-offset-1">
+                <img src="files/research-AccAlgo.png" width="100%" class="img-rounded" style="margin: 0% 0%">
+            </div>
+            <div class="col-xs-9 col-sm-9 col-md-7">
+                <h4>From Convolutional Operator Learning to Neural Networks</h4>
+                <p class="text-left">
+		   "Learning" convolutional operators from large datasets and applying the learned operators is a growing trend in a wide range of applications in signal/image processing and computer vision. 
+		   Patch-based approach---referred to the <i>local</i> approach---is a well-known kernel learning framework for offering straightforward mathematical formulation and optimization. 
+		   However, this approach is not well-suited to learning kernels from "big data" and/or applying the learned operators to solve large-dimensional inverse problems, because it needs to store many overlapping patches extracted from the training or testing images.
+		   This becomes even more problematic in forming (deep) hierarchical representations, e.g., <i>(de)convolutional neural network</i> ((de)CNN).
+		   The recent <i>global</i> approach resolves the issues by learning kernels and obtaining (sparse) representations directly in the image domain without storing many overlapping patches.
+                   I am the first researcher in developing fast and convergence-guaranteed convolutional operator learning frameworks within the global approach, e.g., <i>convolutional dictionary learning</i> and <i>convolutional analysis operator learning</i> (CAOL), via the so-called <i>Block Proximal Gradient method using Majorizer</i> (BPG-M) that sheds new light on tight majorization in solving block multi-(non)convex problems by generalizing BPG.
+		   The learned convolutional operators improved image recovery performance for some extreme imaging applications, e.g., sparse-view CT and denoising low SNR images. 
+		</p>
+		<p class="text-left">	
+		   From $2015$, researchers have been studying algorithmic properties of training (deep) CNNs by reformulating their objective function.
+		   More recently, there have been some attempts to moderate some problems of stochastic gradient methods in which gradients are computed by back-propagation---the most widely used optimization technique in training CNN.
+		   However, there exist no solid APG-type frameworks to maximally accelerate the training convergence of CNN.
+		   On the application sides, researchers have begun to apply (deep) NNs to iterative signal/image recovery models. 
+		   However, they lack "complete" mathematical models in iterative signal recovery; it limits comprehensively understand/analyze them in terms of both signal recovery and algorithmic properties, e.g., acceleration and convergence.
+		   I am a pioneer in mathematically formulating CNNs (e.g., LeNet-5) particularly suitable for iterative signal/image recovery, while overcoming the aforementioned limitations via the CAOL and BPG-M frameworks.
+                </p>
+            </div>
+        </div>
         <div class="row">
             <div class="col-xs-3 col-sm-3 col-md-2 col-md-offset-1">
                 <img src="files/research-CS.png" width="100%" class="img-rounded" style="margin: 0% 0%">
@@ -143,22 +167,6 @@
 		   <i>Parallel acquisition</i> systems are employed successfully in a variety of different sensing/imaging applications (e.g., parallel MRI, multi-view imaging, wireless sensor networks, light-field imaging with muptiple focal stacks, synthetic aperture radar imaging, derivative sampling in seismic imaging, etc.) when a single sensor cannot provide enough measurements for a high-quality signal recovery.  
 	           Compressed sensing (CS), random sub-sampling theory dependent on the sparsity of signal, has been used to establish the theoretical improvements of such systems by providing recovery guarantees for which, subject to appropriate conditions, the number of measurements required per sensor decreases linearly with the total number of sensors.
 		   I am a pioneer in establishing theoretical improvements of CS parallel acquisition architecture, developing CS-based imaging fundamentals, and applying these theories in practical applications, e.g., parallel MRI (MRI using multiple receive coils) and light-field imaging with multiple focal stacks.
-                </p>
-            </div>
-        </div>
-	<div class="row">
-            <div class="col-xs-3 col-sm-3 col-md-2 col-md-offset-1">
-                <img src="files/research-AccAlgo.png" width="100%" class="img-rounded" style="margin: 0% 0%">
-            </div>
-            <div class="col-xs-9 col-sm-9 col-md-7">
-                <h4>Convolutional Dictionary Learning: Acceleration and Convergence</h4>
-                <p class="text-left">
-		   <i>Convolutional dictionary learning</i> (CDL; or convolutional sparse coding) is a fundamental component to mathematically understand (deep) convolutional neural networks.
-		   Moreover, with the help of its single layer structure, the learned filters from CDL have been successfully applied to some image processing problems, e.g., image inpainting and denoising.
-		   An accelerated CDL algorithm development is the first essential issue in learning hundreds of filters from &quot;big data&quot; that consist of millions of training images. 
-	           The convergence guarantee is another crucial issue. Without convergence theorem, one cannot guarantee whether the learned filters after many iterations are reasonable or not; in addition, convergence analysis can provide a new perspective to design faster algorithms.
-		   I am in the forefront of developing convergence-guaranteed and stable algorithms of CDL and accelerating the algorithms.   
-		   While establishing accelerated and convergent algorithms for CDL, I am actively applying them to reconstruct images in medical imaging and computational photography.
                 </p>
             </div>
         </div>
