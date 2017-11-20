@@ -144,8 +144,8 @@
 		   However, this approach is not well-suited to learning kernels from &quot;big data&quot; and/or applying the learned operators to solve large-dimensional inverse problems, because it needs to store many overlapping patches extracted from the training or testing images.
 		   This becomes even more problematic in forming (deep) hierarchical representations, e.g., <i>(de)convolutional neural network</i> ((de)CNN).
 		   The recent <i><b>global</b></i> approach resolves the issues by learning kernels and obtaining (sparse) representations directly in the image domain without storing many overlapping patches.
-                   I am the first researcher in developing fast and convergence-guaranteed convolutional operator learning frameworks within the global approach, e.g., <i><b>convolutional dictionary learning</b></i> (CDL <a href="ref:cdl">[2]</a>) and <i><b>convolutional analysis operator learning</b></i> (CAOL <a href="ref:caol">[1]</a>), via the so-called <i><b>Block Proximal Gradient method using Majorizer</b></i> (BPG-M <a href="ref:caol">[1</a>, <a href="ref:cdl">2]</a>) that sheds new light on tight majorization in solving block multi-(non)convex problems.
-		   The learned convolutional operators improved image recovery performance for some extreme imaging applications, e.g., <u>sparse-view CT</u> <a href="ref:caol">[1</a>, <a href="ref:ct_l1_recon">3]</a> and <u>denoising low SNR images</u> <a href="ref:cdl">[2]</a>. 
+                   I am the first researcher in developing fast and convergence-guaranteed convolutional operator learning frameworks within the global approach, e.g., <i><b>convolutional dictionary learning</b></i> (CDL <a href="#ref:cdl">[2]</a>) and <i><b>convolutional analysis operator learning</b></i> (CAOL <a href="#ref:caol">[1]</a>), via the so-called <i><b>Block Proximal Gradient method using Majorizer</b></i> (BPG-M <a href="#ref:caol">[1</a>, <a href="#ref:cdl">2]</a>) that sheds new light on tight majorization in solving block multi-(non)convex problems.
+		   The learned convolutional operators improved image recovery performance for some extreme imaging applications, e.g., <u>sparse-view CT</u> <a href="#ref:caol">[1</a>, <a href="#ref:ct_l1_recon">3]</a> and <u>denoising low SNR images</u> <a href="#ref:cdl">[2]</a>. 
 		</p>
 		<p class="text-left">	
 		   From 2015, researchers have been studying algorithmic properties of training (deep) CNNs by reformulating their objective function.
@@ -153,16 +153,18 @@
 		   However, there exist no solid algorithmic frameworks&mdash;particulalry based on accelerated proximal gradient methods&mdash;to maximally accelerate the training convergence of CNN.
 		   On the application sides, researchers have begun to apply (deep) NNs to iterative signal/image recovery models. 
 		   However, they lack &quot;complete&quot; mathematical models in iterative signal recovery; it limits comprehensively understand/analyze them in terms of both signal recovery and algorithmic properties, e.g., acceleration and convergence.
-		   I am a pioneer in mathematically formulating CNNs (e.g., LeNet-5) particularly suitable for iterative signal/image recovery, while overcoming the aforementioned limitations via the CAOL and BPG-M frameworks <a href="ref:caol">[1]</a>.
+		   I am a pioneer in mathematically formulating CNNs (e.g., LeNet-5) particularly suitable for iterative signal/image recovery, while overcoming the aforementioned limitations via the CAOL and BPG-M frameworks <a href="#ref:caol">[1]</a>.
                 </p>
 		<p class="text-left">	
 		<a name="ref:caol">[1]</a> <b>Il Yong Chun</b> and Jeffrey A. Fessler,
 			&quot;Convolutional analysis operator learning in global approach: Acceleration, convergence, application, and neural networks,&quot;
 			preprint, Nov. 2017.<br>
+			
 		<a name="ref:cdl">[2]</a> <b>Il Yong Chun</b> and Jeffrey A. Fessler,
  			&quot;Convolutional dictionary learning: Acceleration and convergence,&quot; 
 			<em>IEEE Trans. Image Process.</em>, vol. PP, no. 99, Oct. 2017. 
 			[Online] Available: <a href="http://arxiv.org/abs/1707.00389" target="_blank">http://arxiv.org/abs/1707.00389</a><br>
+			
 		<a name="ref:ct_l1_recon">[3]</a> <b>Il Yong Chun</b>, Xuehang Zheng, Zhipeng Li, Yong Long, and Jeffrey A. Fessler, 
 			&quot;Sparse-view X-ray CT reconstruction using &#8467;<sub>1</sub> prior with learned transform,&quot;
 			submitted to <em>IEEE Trans. Rad. Plasma Med. Sci.</em>, Oct. 2017. 
@@ -178,19 +180,21 @@
                 <h4>Compressed Sensing and Parallel Acquisition: Theory and Application</h4>
                 <p class="text-left">
 		   <i><b>Parallel acquisition</b></i> systems are employed successfully in a variety of different sensing/imaging applications (e.g., parallel MRI, multi-view imaging, wireless sensor networks, light-field imaging with muptiple focal stacks, synthetic aperture radar imaging, derivative sampling in seismic imaging, etc.) when a single sensor cannot provide enough measurements for a high-quality signal recovery.  
-	           Compressed sensing (CS), random sub-sampling theory dependent on the sparsity of signal, has been used to establish the theoretical improvements of such systems by providing recovery guarantees for which, subject to appropriate conditions, the number of measurements required per sensor decreases linearly with the total number of sensors [4, 5].
-		   I am a pioneer in establishing theoretical improvements of CS parallel acquisition architecture [3, 4], developing CS-based imaging fundamentals, and applying these theories in practical applications, e.g., <u>parallel MRI</u> (MRI using multiple receive coils, [6]) and <u>light-field photography with multiple focal stacks</u>.
+	           Compressed sensing (CS), random sub-sampling theory dependent on the sparsity of signal, has been used to establish the theoretical improvements of such systems by providing recovery guarantees for which, subject to appropriate conditions, the number of measurements required per sensor decreases linearly with the total number of sensors <a href="#ref:cs&pa_ripless">[4,</a> <a href="#ref:cs&pa_subgauss">5]</a>.
+		   I am a pioneer in establishing theoretical improvements of CS parallel acquisition architecture <a href="#ref:cs&pa_ripless">[4,</a> <a href="#ref:cs&pa_subgauss">5]</a>, developing CS-based imaging fundamentals, and applying these theories in practical applications, e.g., <u>parallel MRI</u> (MRI using multiple receive coils <a href="#ref:cs&pmri">[6]</a>) and <u>light-field photography with multiple focal stacks</u>.
                 </p>
 		<p class="text-left">	
-		[4] <b>Il Yong Chun</b> and Ben Adcock,
+		<a name="ref:cs&pa_ripless">[4]</a> <b>Il Yong Chun</b> and Ben Adcock,
 			&quot;Compressed sensing and parallel acquisition,&quot; 
 			<em>IEEE Trans. Inf. Theory</em>, vol. 63, no. 8, pp. 4860--4882, May 2017. 
 			[Online] Available: <a href="http://arxiv.org/abs/1601.06214" target="_blank">http://arxiv.org/abs/1601.06214</a><br>
-		[5] <b>Il Yong Chun</b> and Ben Adcock,
+			
+		<a name="ref:cs&pa_subgauss">[5]</a> <b>Il Yong Chun</b> and Ben Adcock,
 			&quot;Uniform recovery from subgaussian multi-sensor measurements,&quot; 
 			under review for <em>Appl. Comput. Harmon. Anal.</em>, Nov. 2017. 
 			[Online] Available: <a href="http://arxiv.org/abs/1610.05758" target="_blank">http://arxiv.org/abs/1610.05758</a><br>
-		[6] <b>Il Yong Chun</b>, Ben Adcock, and Thomas M. Talavage, 
+			
+		<a name="ref:cs&pmri">[6]</a> <b>Il Yong Chun</b>, Ben Adcock, and Thomas M. Talavage, 
 			&quot;Efficient compressed sensing SENSE pMRI reconstruction with joint sparsity promotion,&quot; 
 			<em>IEEE Trans. Med. Imag.</em>, vol. 5, no. 1, pp. 354--368, Jan. 2016.
 		</p>
@@ -205,11 +209,11 @@
                 <p class="text-left">		
                     Most imaging devices have complicated imaging physics and suffer from various types of noise. This is the main reason that underlying mathematical analyses are largely absent in their image recovery performance. If undersampling schemes are involved, the performance analysis becomes a tricky math problem. 
 		    By exploiting signal processing estimation techniques (e.g., mean square error, MSE, and SNR) and stochastic modeling, my third research interest is to adaptively control imaging techniques to improve the quality of reconstructed images. 
-		    For example, I initially established the imaging fundamentals of <u>(high-field) MRI using multiple transmit/receive coils</u> and its relation to MSE, and proposed a new excitation pattern design which further reduces MSE and manages the specific absorption rate [7].
+		    For example, I initially established the imaging fundamentals of <u>(high-field) MRI using multiple transmit/receive coils</u> and its relation to MSE, and proposed a new excitation pattern design which further reduces MSE and manages the specific absorption rate <a href="#ref:mimo_mri">[7]</a>.
 		    In particular, adaptively considering the spatial information of transmit and receive coils and expected aliasing patterns, the proposed excitation pattern not only successfully reduces the error variances but also suppresses the aliasing artifacts caused by extremely accelerating (i.e., 8-fold) scanning.
                 </p>
 		<p class="text-left">	
-		[7] <b>Il Yong Chun</b>, Song Noh, David J. Love, Thomas M. Talavage, Stephen Beckley, and Sherman J. Kisner, 
+		<a name="ref:mimo_mri">[7]</a> <b>Il Yong Chun</b>, Song Noh, David J. Love, Thomas M. Talavage, Stephen Beckley, and Sherman J. Kisner, 
 			&quot;Mean squared error (MSE)-based excitation pattern design for parallel transmit and receive SENSE MRI image reconstruction,&quot; 
 			<em>IEEE Trans. Comput. Imag.</em>, vol. 2, no. 4, pp. 424--439, Dec. 2016.
 		</p>    
