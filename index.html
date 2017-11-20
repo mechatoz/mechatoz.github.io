@@ -144,13 +144,13 @@
 		   However, this approach is not well-suited to learning kernels from "big data" and/or applying the learned operators to solve large-dimensional inverse problems, because it needs to store many overlapping patches extracted from the training or testing images.
 		   This becomes even more problematic in forming (deep) hierarchical representations, e.g., <i>(de)convolutional neural network</i> ((de)CNN).
 		   The recent <i>global</i> approach resolves the issues by learning kernels and obtaining (sparse) representations directly in the image domain without storing many overlapping patches.
-                   I am the first researcher in developing fast and convergence-guaranteed convolutional operator learning frameworks within the global approach, e.g., <i>convolutional dictionary learning</i> and <i>convolutional analysis operator learning</i> (CAOL), via the so-called <i>Block Proximal Gradient method using Majorizer</i> (BPG-M) that sheds new light on tight majorization in solving block multi-(non)convex problems by generalizing BPG.
-		   The learned convolutional operators improved image recovery performance for some extreme imaging applications, e.g., sparse-view CT and denoising low SNR images. 
+                   I am the first researcher in developing fast and convergence-guaranteed convolutional operator learning frameworks within the global approach, e.g., <i>convolutional dictionary learning</i> and <i>convolutional analysis operator learning</i> (CAOL), via the so-called <i>Block Proximal Gradient method using Majorizer</i> (BPG-M) that sheds new light on tight majorization in solving block multi-(non)convex problems.
+		   The learned convolutional operators improved image recovery performance for some extreme imaging applications, e.g., sparse-view CT and denoising low signal-to-noise ratio (SNR) images. 
 		</p>
 		<p class="text-left">	
-		   From $2015$, researchers have been studying algorithmic properties of training (deep) CNNs by reformulating their objective function.
+		   From 2015, researchers have been studying algorithmic properties of training (deep) CNNs by reformulating their objective function.
 		   More recently, there have been some attempts to moderate some problems of stochastic gradient methods in which gradients are computed by back-propagation---the most widely used optimization technique in training CNN.
-		   However, there exist no solid APG-type frameworks to maximally accelerate the training convergence of CNN.
+		   However, there exist no solid frameworks based on accelerated proximal gradient method to maximally accelerate the training convergence of CNN.
 		   On the application sides, researchers have begun to apply (deep) NNs to iterative signal/image recovery models. 
 		   However, they lack "complete" mathematical models in iterative signal recovery; it limits comprehensively understand/analyze them in terms of both signal recovery and algorithmic properties, e.g., acceleration and convergence.
 		   I am a pioneer in mathematically formulating CNNs (e.g., LeNet-5) particularly suitable for iterative signal/image recovery, while overcoming the aforementioned limitations via the CAOL and BPG-M frameworks.
@@ -178,7 +178,7 @@
                 <h4>Adaptive Computational Imaging: Theory and Application</h4>
                 <p class="text-left">		
                     Most imaging devices have complicated imaging physics and suffer from various types of noise. This is the main reason that underlying mathematical analyses are largely absent in their image recovery performance. If undersampling schemes are involved, the performance analysis becomes a tricky math problem. 
-		    By exploiting signal processing estimation techniques (e.g., mean square error, MSE, and signal-to-noise ratio) and stochastic modeling, my third research interest is to adaptively control imaging techniques to improve the quality of reconstructed images. 
+		    By exploiting signal processing estimation techniques (e.g., mean square error, MSE, and SNR) and stochastic modeling, my third research interest is to adaptively control imaging techniques to improve the quality of reconstructed images. 
 		    For example, I initially established the imaging fundamentals of (high-field) MRI using multiple transmit/receive coils and its relation to MSE, and proposed a new excitation pattern design which further reduces MSE and manages the specific absorption rate.
 		    In particular, adaptively considering the spatial information of transmit and receive coils and expected aliasing patterns, the proposed excitation pattern not only successfully reduces the error variances but also suppresses the aliasing artifacts caused by extremely accelerating (i.e., 8-fold) scanning.
                 </p>
