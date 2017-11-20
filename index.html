@@ -144,7 +144,7 @@
 		   However, this approach is not well-suited to learning kernels from "big data" and/or applying the learned operators to solve large-dimensional inverse problems, because it needs to store many overlapping patches extracted from the training or testing images.
 		   This becomes even more problematic in forming (deep) hierarchical representations, e.g., <i>(de)convolutional neural network</i> ((de)CNN).
 		   The recent <i><b>global</b></i> approach resolves the issues by learning kernels and obtaining (sparse) representations directly in the image domain without storing many overlapping patches.
-                   I am the first researcher in developing fast and convergence-guaranteed convolutional operator learning frameworks within the global approach, e.g., <i><b>convolutional dictionary learning</b></i> and <i><b>convolutional analysis operator learning</b></i> (CAOL), via the so-called <i><b>Block Proximal Gradient method using Majorizer</b></i> (BPG-M) that sheds new light on tight majorization in solving block multi-(non)convex problems.
+                   I am the first researcher in developing fast and convergence-guaranteed convolutional operator learning frameworks within the global approach, e.g., <i><b>convolutional dictionary learning</b></i> (CDL [2]) and <i><b>convolutional analysis operator learning</b></i> (CAOL [1]), via the so-called <i><b>Block Proximal Gradient method using Majorizer</b></i> (BPG-M [1, 2]) that sheds new light on tight majorization in solving block multi-(non)convex problems.
 		   The learned convolutional operators improved image recovery performance for some extreme imaging applications, e.g., <u>sparse-view CT</u> and <u>denoising low SNR images</u>. 
 		</p>
 		<p class="text-left">	
@@ -153,8 +153,17 @@
 		   However, there exist no solid algorithmic frameworks&mdash;particulalry based on accelerated proximal gradient methods&mdash;to maximally accelerate the training convergence of CNN.
 		   On the application sides, researchers have begun to apply (deep) NNs to iterative signal/image recovery models. 
 		   However, they lack "complete" mathematical models in iterative signal recovery; it limits comprehensively understand/analyze them in terms of both signal recovery and algorithmic properties, e.g., acceleration and convergence.
-		   I am a pioneer in mathematically formulating CNNs (e.g., LeNet-5) particularly suitable for iterative signal/image recovery, while overcoming the aforementioned limitations via the CAOL and BPG-M frameworks.
+		   I am a pioneer in mathematically formulating CNNs (e.g., LeNet-5) particularly suitable for iterative signal/image recovery, while overcoming the aforementioned limitations via the CAOL and BPG-M frameworks [1].
                 </p>
+		<p class="text-left">	
+		[1] <b>Il Yong Chun</b> and Jeffrey A. Fessler,
+			"Convolutional analysis operator learning in global approach: Acceleration, convergence, application, and neural networks,"
+			preprint, Nov. 2017. \n
+		[2] <b>Il Yong Chun</b> and Jeffrey A. Fessler,
+ 			"Convolutional dictionary learning: Acceleration and convergence," 
+			<em>IEEE Trans. Image Process.</em>, vol. PP, no. 99, Oct. 2017. 
+			[Online] Available: <a href="https://arxiv.org/abs/1707.00389" target="_blank">https://arxiv.org/abs/1707.00389</a>
+		</p>
             </div>
         </div>
         <div class="row">
