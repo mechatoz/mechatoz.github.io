@@ -191,21 +191,21 @@
                 <h4><a name="sec:cs&pa" style="color: #000000">Compressed Sensing and Parallel Acquisition: Theory and Application</a></h4>
                 <p class="text-left">
 		   <i><b>Parallel acquisition</b></i> systems are employed successfully in a variety of different sensing/imaging applications (e.g., parallel MRI, multi-view imaging, wireless sensor networks, light-field imaging with multiple focal stacks, synthetic aperture radar imaging, derivative sampling in seismic imaging, etc.) when a single sensor cannot provide enough measurements for a high-quality signal recovery.  
-	           Compressed sensing (CS), random sub-sampling theory dependent on the sparsity of signal, has been used to establish the theoretical improvements of such systems by providing recovery guarantees for which, subject to appropriate conditions, the number of measurements required per sensor decreases linearly with the total number of sensors <a href="#ref:cs&pa">[4, 5]</a>.
-		   I am a pioneer in establishing theoretical improvements of CS parallel acquisition architecture <a href="#ref:cs&pa">[4, 5, 6]</a>, developing CS-based imaging fundamentals, and applying these theories in practical applications, e.g., <u>parallel MRI</u> (MRI using multiple receive coils <a href="#ref:cs&pa">[6]</a>) and <u>light-field photography with multiple focal stacks</u>.
+	           Compressed sensing (CS), random sub-sampling theory dependent on the sparsity of signal, has been used to establish the theoretical improvements of such systems by providing recovery guarantees for which, subject to appropriate conditions, the number of measurements required per sensor decreases linearly with the total number of sensors <a href="#ref:cs&pa">[5, 6]</a>.
+		   I am a pioneer in establishing theoretical improvements of CS parallel acquisition architecture <a href="#ref:cs&pa">[5, 6, 7]</a>, developing CS-based imaging fundamentals, and applying these theories in practical applications, e.g., <u>parallel MRI</u> (MRI using multiple receive coils <a href="#ref:cs&pa">[8]</a>) and <u>light-field photography with multiple focal stacks</u>.
                 </p>
 		<p class="text-left">	
 		<a name="ref:cs&pa" style="color: #000000"><b>References</b></a><br>
-		[4] <b>Il Yong Chun</b> and Ben Adcock,
+		[5] <b>Il Yong Chun</b> and Ben Adcock,
 			&quot;Compressed sensing and parallel acquisition,&quot; 
 			<em>IEEE Trans. Inf. Theory</em>, vol. 63, no. 8, pp. 4860--4882, May 2017.<br>
 			
-		[5] <b>Il Yong Chun</b> and Ben Adcock,
+		[6] <b>Il Yong Chun</b> and Ben Adcock,
 			&quot;Uniform recovery from subgaussian multi-sensor measurements,&quot; 
 			under review for <em>Appl. Comput. Harmon. Anal.</em>, Feb. 2018. 
 			[Online] Available: <a href="http://arxiv.org/abs/1610.05758" target="_blank">http://arxiv.org/abs/1610.05758</a><br>
 			
-		[6] <b>Il Yong Chun</b>, Ben Adcock, and Thomas M. Talavage, 
+		[7] <b>Il Yong Chun</b>, Ben Adcock, and Thomas M. Talavage, 
 			&quot;Efficient compressed sensing SENSE pMRI reconstruction with joint sparsity promotion,&quot; 
 			<em>IEEE Trans. Med. Imag.</em>, vol. 5, no. 1, pp. 354--368, Jan. 2016.
 		</p>
@@ -223,12 +223,12 @@
                 <p class="text-left">		
                     Most imaging devices have complicated imaging physics and suffer from various types of noise. This is the main reason that underlying mathematical analyses are largely absent in their image recovery performance. If undersampling schemes are involved, the performance analysis becomes a tricky math problem. 
 		    By exploiting signal processing estimation techniques (e.g., mean square error, MSE, and SNR) and stochastic modeling, my third research interest is to adaptively control imaging techniques to improve the quality of reconstructed images. 
-		    For example, I initially established the imaging fundamentals of <u>(high-field) MRI using multiple transmit/receive coils</u> and its relation to MSE, and proposed a new excitation pattern design which further reduces MSE and manages the specific absorption rate <a href="#ref:adpt_imag">[7]</a>.
+		    For example, I initially established the imaging fundamentals of <u>(high-field) MRI using multiple transmit/receive coils</u> and its relation to MSE, and proposed a new excitation pattern design which further reduces MSE and manages the specific absorption rate <a href="#ref:adpt_imag">[8]</a>.
 		    In particular, adaptively considering the spatial information of transmit and receive coils and expected aliasing patterns, the proposed excitation pattern not only successfully reduces the error variances but also suppresses the aliasing artifacts caused by extremely accelerating (i.e., 8-fold) scanning.
                 </p>
 		<p class="text-left">	
 		<a name="ref:adpt_imag" style="color: #000000"><b>References</b></a><br>
-		[7] <b>Il Yong Chun</b>, Song Noh, David J. Love, Thomas M. Talavage, Stephen Beckley, and Sherman J. Kisner, 
+		[8] <b>Il Yong Chun</b>, Song Noh, David J. Love, Thomas M. Talavage, Stephen Beckley, and Sherman J. Kisner, 
 			&quot;Mean squared error (MSE)-based excitation pattern design for parallel transmit and receive SENSE MRI image reconstruction,&quot; 
 			<em>IEEE Trans. Comput. Imag.</em>, vol. 2, no. 4, pp. 424--439, Dec. 2016.
 		</p>
@@ -245,11 +245,11 @@
                 <h4>Neuroimaging and Neuroscience</h4>
                 <p class="text-left">
 		    Recently, rapid interest has grown in the neuroscience community in evaluating the impact of brain changes caused by repetitive sub-concussive hits to the head.	
-		    Using <i>diffusion tensor MRI</i>, I evaluated longitudinal white matter changes in high-school football players and examined how these changes may be linked to an athlete’s history of accumulated head collision events during practices and games <a href="#ref:neuroimag">[8, 9]</a>.
+		    Using <i>diffusion tensor MRI</i>, I evaluated longitudinal white matter changes in high-school football players and examined how these changes may be linked to an athlete’s history of accumulated head collision events during practices and games <a href="#ref:neuroimag">[9, 10]</a>.
 		</p>
                 <p class="text-left">
 		    On the other hand, an appropriate statistical image analysis framework (e.g., hypothesis testing) to reliably detect subtle changes in athletes who experienced repetitive sub-concussive head blows is largely absent. 
-		    I initially proposed a stronger randomized hypothesis testing method that exploits both completely and incompletely paired data <a href="#ref:neuroimag">[9]</a>. 
+		    I initially proposed a stronger randomized hypothesis testing method that exploits both completely and incompletely paired data <a href="#ref:neuroimag">[10]</a>. 
 		    The method successfully detects more significantly deviated regions in the sub-concussed brains, thereby providing a stronger evidence to suggest that head impacts commonly occur during contact sports have the potential for neurological injury although those impacts do not result in visible symptoms of neurological dysfunction.
                 </p>
 		<!--
@@ -258,10 +258,10 @@
 		-->
 		<p class="text-left">	
 		<a name="ref:neuroimag" style="color: #000000"><b>References</b></a><br>
-		[8] <b>Il Yong Chun</b>, Xianglun Mao, Eric L. Breedlove, Larry J. Leverenz, Eric A. Nauman, and Thomas M. Talavage, 
+		[9] <b>Il Yong Chun</b>, Xianglun Mao, Eric L. Breedlove, Larry J. Leverenz, Eric A. Nauman, and Thomas M. Talavage, 
 			&quot;DTI detection of longitudinal WM abnormalities due to accumulated head impacts,&quot; 
 			<em>Dev. Neuropsychol.</em>, vol. 40, no. 2, pp. 92--97, May 2015.<br>
-		[9] Sumra Bari, <b>Il Yong Chun</b>, Larry J. Leverenz, Eric A. Nauman, and Thomas M. Talavage, 
+		[10] Sumra Bari, <b>Il Yong Chun</b>, Larry J. Leverenz, Eric A. Nauman, and Thomas M. Talavage, 
 			&quot;DTI detection of WM abnormalities using randomization test with complete and incomplete pairs,&quot; 
 			in <em>Proc. Org. for Hum. Brain Mapp. (OHBM)</em>, Honolulu, HI, Jun. 2015.
 		</p>
