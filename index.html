@@ -141,24 +141,24 @@
                 <img src="files/research-AccAlgo.png" width="100%" class="img-rounded" style="margin: 0% 0%">
             </div>
             <div class="col-xs-9 col-sm-9 col-md-7">
-                <h4><a name="sec:col&cnn" style="color: #000000">Recurrent Regression CNN with (Un)supervised Training: Theory and Application</a></h4>
+                <h4><a name="sec:col&cnn" style="color: #000000">Iterative Regression CNN with (Un)supervised Training: Theory and Application</a></h4>
                 <p class="text-left">
 		   Training a <i>regression</i> convolutional neural network (CNN), and applying the trained CNNs is a recently growing trend in a wide range of applications in computational imaging, signal/image processing, and computer vision.
-		   For inverse imaging problems, researchers often aim to find a regression CNN that maps from &quot;noisy&quot; to &quot;clean&quot; images. Existing non-recurrent regression CNNs (trained in a supervised way) often suffer from the overfitting problems <a href="#ref:col&cnn">[6]</a>.
-		   I constructed recurrent CNNs (whose each layer has feedback steps) <a href="#ref:col&cnn">[1, 2, 4, 5]</a> that can resolve the overfitting or underfitting problems by considering imaging physics – specifically, (back)projecting the output of image mapping CNNs onto a measurement domain at each layer.
+		   For inverse imaging problems, researchers often aim to find a regression CNN that maps from &quot;noisy&quot; to &quot;clean&quot; images. Existing non-iterative regression CNNs (trained in a supervised way) often suffer from the overfitting problems <a href="#ref:col&cnn">[6, 7, 8]</a>.
+		   I constructed iterative CNNs (whose each layer has feedback steps) <a href="#ref:col&cnn">[1, 2, 4, 5]</a> that can resolve the overfitting or underfitting problems by considering imaging physics – specifically, (back)projecting the output of image mapping CNNs onto a measurement domain at each layer.
 		</p>
 		<p class="text-left">   
 	           I am a pioneer in developing fast and convergence-guaranteed unsupervised learning frameworks that train regression CNNs; examples include <i><b>convolutional analysis operator learning</b></i> (CAOL <a href="#ref:col&cnn">[1]</a>) and <i><b>convolutional dictionary learning</b></i> <a href="#ref:col&cnn">[2]</a>.
 		   In particular, CAOL trains autoencoding CNNs (generating hierarchical features).
-		   For fast and convergent training, I developed the so-called <i><b>block proximal gradient method using majorizer</b></i> that sheds new light on tight majorization in solving block multi-(non)convex problems <a href="#ref:col&cnn">[1, 2]</a>.
+		   For fast and convergent training, I developed the so-called <i><b>block proximal extrapolated gradient method using majorizer</b></i> that sheds new light on tight majorization in solving block multi-(non)convex problems <a href="#ref:col&cnn">[1, 2]</a>.
 		   In addition, I proved that big data can improve filter estimates in CAOL <a href="#ref:col&cnn">[3]</a>.
-		   The regression CNNs trained by the unsupervised approaches improved image recovery performance for some extreme imaging applications, e.g., <u>sparse-view CT</u> <a href="#ref:col&cnn">[1, 6]</a> and <u>denoising low SNR images</u> <a href="#ref:col&cnn">[2]</a>.
+		   The regression CNNs trained by the unsupervised approaches improved image recovery performance for some extreme imaging applications, e.g., <u>sparse-view CT</u> <a href="#ref:col&cnn">[1, 7]</a> and <u>denoising low SNR images</u> <a href="#ref:col&cnn">[2]</a>.
 		   Nonetheless, the corresponding iterative image recovery algorithm needs several hundreds of iterations to converge, detracting from its practical use.
 		</p>
 		<p class="text-left">      
-		   In addition, I am a leading expert in developing fast and convergent recurrent regression CNNs, e.g., <b><i>BCD-Net</b></i> <a href="#ref:col&cnn">[5]</a> and <b><i>Momentum-Net</b></i> <a href="#ref:col&cnn">[4]</a>, that are trained in a supervised way to give &quot;best&quot; image estimates at each layer and moderate the aforementioned issue in the unsupervised frameworks.
+		   In addition, I am a leading expert in developing fast and convergent iterative regression CNNs, e.g., <b><i>BCD-Net</b></i> <a href="#ref:col&cnn">[5]</a> and <b><i>Momentum-Net</b></i> <a href="#ref:col&cnn">[4]</a>, that are trained in a supervised way to give &quot;best&quot; image estimates at each layer and moderate the aforementioned issue in the unsupervised frameworks.
 		   BCD-Net consists of image mapping and reconstruction modules at each layer, and achieved fast and accurate iterative image recovery for <u>highly undersampled MRI</u> and <u>denoising low SNR images</u> <a href="#ref:col&cnn">[5]</a>, while guaranteeing the sequence convergence.	
-		   However, for other imaging modalities, e.g., <u>low-count positron emission tomography</u> <a href="#ref:col&cnn">[7]</a>, BCD-Net needs to use an iterative reconstruction module at each layer, and thus, it increases total image recovery time and breaks the convergence guarantees.
+		   However, for other imaging modalities, e.g., <u>low-dose CT</u> <a href="#ref:col&cnn">[6]</a> and <u>low-count PET</u> <a href="#ref:col&cnn">[7]</a>, BCD-Net needs to use an iterative reconstruction module at each layer, and thus, it increases total image recovery time and breaks the convergence guarantees.
 		   To overcome the limitations of BCD-Net, I proposed Momentum-Net that consists of extrapolation, image mapping, and reconstruction modules at each layer. Momentum-Net achieved fast and accurate iterative image recovery for <u>sparse-view CT</u> and <u>light-field photography using limited focal stack data</u> <a href="#ref:col&cnn">[4]</a>.	
 		   Importantly, it guarantees convergence to a fixed-point for a wide range of imaging problems.
 		</p>
@@ -166,35 +166,39 @@
 		<a name="ref:col&cnn" style="color: #000000"><b>References</b></a><br>
 		[1] <b>Il Yong Chun</b> and Jeffrey A. Fessler,
 			&quot;Convolutional analysis operator learning: Acceleration and convergence,&quot;
-			submitted, Jan. 2018.<br>
+			submitted, Jan. 2019.<br>
 			[Online] Available: <a href="http://arxiv.org/abs/1802.05584" target="_blank">http://arxiv.org/abs/1802.05584</a><br>
 			
 		[2] <b>Il Yong Chun</b> and Jeffrey A. Fessler,
  			&quot;Convolutional dictionary learning: Acceleration and convergence,&quot; 
-			<em>IEEE Trans. Image Process.</em>, vol. 27, no. 4, Apr. 2018.<br>
+			<em>IEEE Trans. Image Process.</em>, 27(4):1697&ndash1712, Apr. 2018.<br>
 			
 		[3] <b>Il Yong Chun</b>&#42;, David Hong&#42;, Ben Adcock, and Jeffrey A. Fessler,
  			&quot;Convolutional analysis operator learning: Dependence on training data,&quot; 
-			submitted, Feb. 2019.<br>
-			[Online] Available: <a href="http://arxiv.org/abs/1902.08267" target="_blank">http://arxiv.org/abs/1902.08267</a><br>
-			
-		[4] <b>Il Yong Chun</b>, Hongki Lim&#42;, Zhengyu Huang&#42;, and Jeffrey A. Fessler,
-			&quot;Fast and convergent iterative signal recovery using trained convolutional neural networks,&quot;
-			in <em>Proc. Allerton</em>, Oct. 2018.<br>
+			<em>IEEE Signal Process. Lett.</em>, 26(8):1137&ndash1141, Aug. 2019.<br>
+				
+		[4] <b>Il Yong Chun</b>, Zhengyu Huang&#42; Hongki Lim&#42;, and Jeffrey A. Fessler,
+			&quot;Momentum-Net: Fast and convergent iterative neural network for inverse problems,&quot;
+			<em>preprint</em>, Jul. 2019.<br>
 								
 		[5] <b>Il Yong Chun</b> and Jeffrey A. Fessler,
 			&quot;Deep BCD-Net using identical encoding-decoding CNN structures for iterative image recovery,&quot;
-			in <em>Proc. IEEE IVMSP Workshop</em>, Apr. 2018.<br>
+			in <em>Proc. IEEE IVMSP Workshop</em>, pp. 1&ndash5, Apr. 2018.<br>
 			[Online] Available: <a href="http://arxiv.org/abs/1802.07129" target="_blank">http://arxiv.org/abs/1802.07129</a><br>
-			
-		[6] Xuehang Zheng&#42;, <b>Il Yong Chun</b>&#42;, Zhipeng Li, Yong Long, and Jeffrey A. Fessler, 
+
+		[6] <b>Il Yong Chun</b>&#42;, Xuehang Zheng&#42;, Yong Long, and Jeffrey A. Fessler, 
+			&quot;BCD-Net for low-dose CT reconstruction: Acceleration, convergence, and generalization,&quot;
+			accepted to <em>MICCAI</em>, Jul. 2019.<br>
+	
+		[7] Xuehang Zheng&#42;, <b>Il Yong Chun</b>&#42;, Zhipeng Li, Yong Long, and Jeffrey A. Fessler, 
 			&quot;Sparse-view X-ray CT reconstruction using &#8467;<sub>1</sub> prior with learned transform,&quot;
 			submitted, Feb. 2019.<br>
 			[Online] Available: <a href="http://arxiv.org/abs/1711.00905" target="_blank">http://arxiv.org/abs/1711.00905</a><br>
 		
-		[7] Hongki Lim, Yuni K. Dewaraja, Jeffrey A. Fessler, and <b>Il Yong Chun</b>,
-			&quot;Application of trained deep BCD-Net to iterative low-count PET image reconstruction,&quot;
-			in <em>Proc. IEEE NSS/MIC</em> (to appear), Nov. 2018.<br>
+		[8] Hongki Lim, <b>Il Yong Chun</b>, Yuni K. Dewaraja, and Jeffrey A. Fessler,
+			&quot;Improved low-count quantitative PET reconstruction with a variational neural network,&quot;
+			submitted, May 2019.<br>
+			[Online] Available: <a href="http://arxiv.org/abs/1906.02327" target="_blank">http://arxiv.org/abs/1906.02327</a><br>
 			
 		(The asterisks (&#42;) indicate equal contributions.)				
 		</p>
@@ -210,27 +214,27 @@
             <div class="col-xs-9 col-sm-9 col-md-7">
                 <h4><a name="sec:cs&pa" style="color: #000000">Compressed Sensing and Parallel Acquisition: Theory and Application</a></h4>
                 <p class="text-left">
-		   <i><b>Parallel acquisition</b></i> systems are employed successfully in a variety of different sensing/imaging applications (e.g., parallel MRI, multi-view imaging, wireless sensor networks, light-field imaging with multiple focal stacks, synthetic aperture radar imaging, derivative sampling in seismic imaging, etc.) when a single sensor cannot provide enough measurements for a high-quality signal recovery.  
-	           Compressed sensing (CS), random sub-sampling theory dependent on the sparsity of signal, has been used to establish the theoretical improvements of such systems by providing recovery guarantees for which, subject to appropriate conditions, the number of measurements required per sensor decreases linearly with the total number of sensors <a href="#ref:cs&pa">[8, 9]</a>.
-		   I am a pioneer in establishing theoretical improvements of CS parallel acquisition architecture <a href="#ref:cs&pa">[8, 9, 10]</a>, developing CS-based imaging fundamentals, and applying these theories in practical applications, e.g., <u>parallel MRI</u> (MRI using multiple receive coils <a href="#ref:cs&pa">[10]</a>) and <u>light-field photography with multiple focal stacks</u> <a href="#ref:cs&pa">[11]</a>.
+		   <i><b>Parallel acquisition</b></i> systems are employed successfully in a variety of different sensing/imaging applications (e.g., parallel MRI, multi-view imaging, wireless sensor networks, light-field imaging with focal stacks, synthetic aperture radar imaging, derivative sampling in seismic imaging, etc.) when a single sensor cannot provide enough measurements for a high-quality signal recovery.  
+	           Compressed sensing (CS), random sub-sampling theory dependent on the sparsity of signal, has been used to establish the theoretical improvements of such systems by providing recovery guarantees for which, subject to appropriate conditions, the number of measurements required per sensor decreases linearly with the total number of sensors <a href="#ref:cs&pa">[9, 10]</a>.
+		   I am a pioneer in establishing theoretical improvements of CS parallel acquisition architecture <a href="#ref:cs&pa">[9, 10, 11]</a>, developing CS-based imaging fundamentals, and applying these theories in practical applications, e.g., <u>parallel MRI</u> (MRI using multiple receive coils <a href="#ref:cs&pa">[11]</a>) and <u>light-field photography with multiple focal stacks</u> <a href="#ref:cs&pa">[12]</a>.
                 </p>
 		<p class="text-left">	
 		<a name="ref:cs&pa" style="color: #000000"><b>References</b></a><br>
-		[8] <b>Il Yong Chun</b> and Ben Adcock,
-			&quot;Compressed sensing and parallel acquisition,&quot; 
-			<em>IEEE Trans. Inf. Theory</em>, vol. 63, no. 8, pp. 4860--4882, May 2017.<br>
-			
 		[9] <b>Il Yong Chun</b> and Ben Adcock,
+			&quot;Compressed sensing and parallel acquisition,&quot; 
+			<em>IEEE Trans. Inf. Theory</em>, 63(8): 4860&ndash4882, May 2017.<br>
+			
+		[10] <b>Il Yong Chun</b> and Ben Adcock,
 			&quot;Uniform recovery from subgaussian multi-sensor measurements,&quot; 
 			<em>Appl. Comput. Harmon. Anal.</em>, Nov. 2018.<br>
 			
-		[10] <b>Il Yong Chun</b>, Ben Adcock, and Thomas M. Talavage, 
+		[11] <b>Il Yong Chun</b>, Ben Adcock, and Thomas M. Talavage, 
 			&quot;Efficient compressed sensing SENSE pMRI reconstruction with joint sparsity promotion,&quot; 
-			<em>IEEE Trans. Med. Imag.</em>, vol. 5, no. 1, pp. 354--368, Jan. 2016.<br>
+			<em>IEEE Trans. Med. Imag.</em>, 5(1): 354&ndash368, Jan. 2016.<br>
 			
-		[11] Cameron J. Blocker&#42;, <b>Il Yong Chun</b>&#42;, and Ben Adcock,
+		[12] Cameron J. Blocker&#42;, <b>Il Yong Chun</b>&#42;, and Jeffrey A. Fessler,
 			&quot;Low-rank plus sparse tensor models for light-field reconstruction from focal stack data,&quot; 
-			in <em>Proc. IEEE IVMSP Workshop</em>, Apr. 2018.<br>
+			in <em>Proc. IEEE IVMSP Workshop</em>, pp. 1&ndash5, Apr. 2018.<br>
 			
 		(The asterisks (&#42;) indicate equal contributions.)	
 		</p>
@@ -247,19 +251,19 @@
                 <h4><a name="sec:adapt" style="color: #000000">Adaptive Computational Imaging: Theory and Application</a></h4>
                 <p class="text-left">		
                     Most imaging devices have complicated imaging physics and suffer from various types of noise. This is the main reason that underlying mathematical analyses are largely absent in their image recovery performance. If undersampling schemes are involved, the performance analysis becomes a tricky math problem. 
-		    By exploiting signal processing estimation techniques (e.g., mean square error, MSE, and SNR) and stochastic modeling, my third research interest is to adaptively control imaging techniques to improve the quality of reconstructed images <a href="#ref:adpt_imag">[12, 13]</a>. 
-		    For example, I initially established the imaging fundamentals of <u>(high-field) MRI using multiple transmit/receive coils</u> and its relation to MSE, and proposed a new excitation pattern design which further reduces MSE and manages the specific absorption rate <a href="#ref:adpt_imag">[12]</a>.
+		    By exploiting signal processing estimation techniques (e.g., mean square error, MSE, and SNR) and stochastic modeling, my third research interest is to adaptively control imaging techniques to improve the quality of reconstructed images <a href="#ref:adpt_imag">[13, 14]</a>. 
+		    For example, I initially established the imaging fundamentals of <u>(high-field) MRI using multiple transmit/receive coils</u> and its relation to MSE, and proposed a new excitation pattern design which further reduces MSE and manages the specific absorption rate <a href="#ref:adpt_imag">[13]</a>.
 		    In particular, adaptively considering the spatial information of transmit and receive coils and expected aliasing patterns, the proposed excitation pattern not only successfully reduces the error variances but also suppresses the aliasing artifacts caused by extremely accelerating (i.e., 8-fold) scanning.
                 </p>
 		<p class="text-left">	
 		<a name="ref:adpt_imag" style="color: #000000"><b>References</b></a><br>
-		[12] <b>Il Yong Chun</b>, Song Noh, David J. Love, Thomas M. Talavage, Stephen Beckley, and Sherman J. Kisner, 
+		[13] <b>Il Yong Chun</b>, Song Noh, David J. Love, Thomas M. Talavage, Stephen Beckley, and Sherman J. Kisner, 
 			&quot;Mean squared error (MSE)-based excitation pattern design for parallel transmit and receive SENSE MRI image reconstruction,&quot; 
-			<em>IEEE Trans. Comput. Imag.</em>, vol. 2, no. 4, pp. 424--439, Dec. 2016.<br>
+			<em>IEEE Trans. Comput. Imag.</em>, 2(4): 424&ndash439, Dec. 2016.<br>
 			
-		[13] <b>Il Yong Chun</b>, Ben Adcock, and Thomas M. Talavage, 
+		[14] <b>Il Yong Chun</b>, Ben Adcock, and Thomas M. Talavage, 
 			&quot;Non-convex compressed sensing CT reconstruction based on tensor discrete Fourier slice theorem,&quot; 
-			in <em>Proc. IEEE EMBC</em>, Aug. 2014.
+			in <em>Proc. IEEE EMBC</em>, pp. 2424&ndash2427, Aug. 2014.
 		</p>
 		<p class="text-right">
 			<a href="#top">Go to top</a>
@@ -274,11 +278,11 @@
                 <h4>Neuroimaging and Neuroscience</h4>
                 <p class="text-left">
 		    Recently, rapid interest has grown in the neuroscience community in evaluating the impact of brain changes caused by repetitive sub-concussive hits to the head.	
-		    Using <i>diffusion tensor MRI</i>, I evaluated longitudinal white matter changes in high-school football players and examined how these changes may be linked to an athlete’s history of accumulated head collision events during practices and games <a href="#ref:neuroimag">[14, 15, 16]</a>.
+		    Using <i>diffusion tensor MRI</i>, I evaluated longitudinal white matter changes in high-school football players and examined how these changes may be linked to an athlete’s history of accumulated head collision events during practices and games <a href="#ref:neuroimag">[15, 16, 17]</a>.
 		</p>
                 <p class="text-left">
 		    On the other hand, an appropriate statistical image analysis framework (e.g., hypothesis testing) to reliably detect subtle changes in athletes who experienced repetitive sub-concussive head blows is largely absent. 
-		    I initially proposed a stronger randomized hypothesis testing method that exploits both completely and incompletely paired data <a href="#ref:neuroimag">[16]</a>. 
+		    I initially proposed a stronger randomized hypothesis testing method that exploits both completely and incompletely paired data <a href="#ref:neuroimag">[17]</a>. 
 		    The method successfully detects more significantly deviated regions in the sub-concussed brains, thereby providing a stronger evidence to suggest that head impacts commonly occur during contact sports have the potential for neurological injury although those impacts do not result in visible symptoms of neurological dysfunction.
                 </p>
 		<!--
@@ -287,15 +291,15 @@
 		-->
 		<p class="text-left">	
 		<a name="ref:neuroimag" style="color: #000000"><b>References</b></a><br>
-		[14] <b>Il Yong Chun</b>, Xianglun Mao, Eric L. Breedlove, Larry J. Leverenz, Eric A. Nauman, and Thomas M. Talavage, 
+		[15] <b>Il Yong Chun</b>, Xianglun Mao, Eric L. Breedlove, Larry J. Leverenz, Eric A. Nauman, and Thomas M. Talavage, 
 			&quot;DTI detection of longitudinal WM abnormalities due to accumulated head impacts,&quot; 
-			<em>Dev. Neuropsychol.</em>, vol. 40, no. 2, pp. 92--97, May 2015.<br>
+			<em>Dev. Neuropsychol.</em>, 40(2): 92&ndash97, May 2015.<br>
 			
-		[15] Ikbeom Jang, <b>Il Yong Chun</b>, Bari Sumra, Evan L. Breedlove, Brian R. Cummiskey, Taylor A. Lee, Roy J. Lycke, Victoria N. Poole, Trey E. Shenk, Diana O. Svaldi, Gregory G. Tamer, Jr., Larry J. Leverenz, Eric A. Nauman, and Thomas M. Talavage,
+		[16] Ikbeom Jang, <b>Il Yong Chun</b>, Bari Sumra, Evan L. Breedlove, Brian R. Cummiskey, Taylor A. Lee, Roy J. Lycke, Victoria N. Poole, Trey E. Shenk, Diana O. Svaldi, Gregory G. Tamer, Jr., Larry J. Leverenz, Eric A. Nauman, and Thomas M. Talavage,
 			&quot;Every hit matters: White matter integrity changes in high school football athletes are correlated with repetitive head acceleration event exposure,&quot; 
 			submitted, Dec. 2018.<br>			
 			
-		[16] Sumra Bari, <b>Il Yong Chun</b>, Larry J. Leverenz, Eric A. Nauman, and Thomas M. Talavage, 
+		[17] Sumra Bari, <b>Il Yong Chun</b>, Larry J. Leverenz, Eric A. Nauman, and Thomas M. Talavage, 
 			&quot;DTI detection of WM abnormalities using randomization test with complete and incomplete pairs,&quot; 
 			in <em>Proc. Org. for Hum. Brain Mapp. (OHBM)</em>, Jun. 2015.
 		</p>
