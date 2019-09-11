@@ -144,7 +144,7 @@
                 <p class="text-left">
 		   Training a <i>regression</i> convolutional neural network (CNN), and applying the trained CNNs is a recently growing trend in a wide range of applications in computational imaging, signal/image processing, and computer vision.
 		   For inverse imaging problems, researchers often aim to find a regression CNN that maps from &quot;noisy&quot; to &quot;clean&quot; images. Existing non-iterative regression CNNs (trained in a supervised way) often suffer from the overfitting problems <a href="#ref:col&cnn">[6, 7, 8]</a>.
-		   I constructed iterative CNNs (whose each layer has feedback steps) <a href="#ref:col&cnn">[1, 2, 4, 5]</a> that can resolve the overfitting or underfitting problems by considering imaging physics – specifically, (back)projecting the output of image mapping CNNs onto a measurement domain at each layer.
+		   I constructed iterative CNNs (whose each layer has feedback steps) <a href="#ref:col&cnn">[1, 2, 4, 5]</a> that can resolve the overfitting or underfitting problems by considering imaging physics – specifically, (back)projecting the output of image refining CNNs onto a measurement domain at each layer.
 		</p>
 		<p class="text-left">   
 	           I am a pioneer in developing fast and convergence-guaranteed unsupervised learning frameworks that train regression CNNs; examples include <i><b>convolutional analysis operator learning</b></i> (CAOL <a href="#ref:col&cnn">[1]</a>) and <i><b>convolutional dictionary learning</b></i> <a href="#ref:col&cnn">[2]</a>.
@@ -156,9 +156,9 @@
 		</p>
 		<p class="text-left">      
 		   In addition, I am a leading expert in developing fast and convergent iterative regression CNNs, e.g., <b><i>BCD-Net</b></i> <a href="#ref:col&cnn">[5]</a> and <b><i>Momentum-Net</b></i> <a href="#ref:col&cnn">[4]</a>, that are trained in a supervised way to give &quot;best&quot; image estimates at each layer and moderate the aforementioned issue in the unsupervised frameworks.
-		   BCD-Net consists of image mapping and reconstruction modules at each layer, and achieved fast and accurate iterative image recovery for <u>highly undersampled MRI</u> and <u>denoising low SNR images</u> <a href="#ref:col&cnn">[5]</a>, while guaranteeing the sequence convergence.	
+		   BCD-Net consists of image refining and reconstruction modules at each layer, and achieved fast and accurate iterative image recovery for <u>highly undersampled MRI</u> and <u>denoising low SNR images</u> <a href="#ref:col&cnn">[5]</a>, while guaranteeing the sequence convergence.	
 		   However, for other imaging modalities, e.g., <u>low-dose CT</u> <a href="#ref:col&cnn">[6]</a> and <u>low-count PET</u> <a href="#ref:col&cnn">[7]</a>, BCD-Net needs to use an iterative solver at each layer, and thus, it increases total image recovery time and breaks the convergence guarantees.
-		   To overcome the limitations of BCD-Net, I proposed Momentum-Net that consists of extrapolation, image mapping, and reconstruction modules at each layer. Momentum-Net achieved fast and accurate iterative image recovery for <u>sparse-view CT</u> and <u>light-field photography using limited focal stack data</u> <a href="#ref:col&cnn">[4]</a>.	
+		   To overcome the limitations of BCD-Net, I proposed Momentum-Net that consists of extrapolation, image refining, and reconstruction modules at each layer. Momentum-Net achieved fast and accurate iterative image recovery for <u>sparse-view CT</u> and <u>light-field photography using limited focal stack data</u> <a href="#ref:col&cnn">[4]</a>.	
 		   Importantly, it guarantees convergence to a fixed-point for a wide range of imaging problems.
 		</p>
 		<p class="text-left">	
